@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "outDir": "./dist",
+      "baseUrl": "./src",
+      "paths": {
+        "@components/*": ["components/*"],
+        "@utils/*": ["utils/*"]
+      },
+      "jsx": "react"
+    },
+    "include": ["src/**/*.js", "test/**/*.js"],
+    "exclude": ["node_modules", "build"]
+  }
+  
