@@ -43,5 +43,40 @@ export default function Navbar() {
 }
 
 const Nav = styled.nav`
-  
+  display: flex;
+  justify-content: space-between; 
+  margin: 0 2rem;
+  color: #fff;
+  padding-top: 2rem;
+  .brand__container {
+    margin: 0 2rem;
+    .toogle {
+      display: none;
+    }
+    .brand img {
+      width: 40px; /* Ajuste o valor conforme necessário para diminuir o tamanho da logo */
+      height: auto; /* Mantém a proporção da imagem */
+    }
+  }
+  .link {
+    ul {
+      list-style-type: none;
+      display: flex;
+      gap: 3rem;
+      .active {
+        a {
+          border-bottom: 0.2rem solid var(--secondary-color);
+        }
+      }
+      li {
+        a {
+          color: #ffff;
+          text-decoration: none;
+          font-weight: 400; /* Correção aqui */
+          font-size: 0.9rem;
+          text-transform: uppercase; /* Correção aqui */
+        }
+      }
+    }
+  }
 `;

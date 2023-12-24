@@ -67,12 +67,7 @@ export default function Home() {
 
 const Section = styled.section`
   background: url(${home}) no-repeat center;
-  min-height: 100px;
+  min-height: 100vh;
   background-size: cover;
   position: relative;
-
-  .content img {
-    width: 40px; /* Ajuste o valor conforme necessário para diminuir o tamanho */
-    height: auto; /* Mantém a proporção do ícone */
-  }
 `;
