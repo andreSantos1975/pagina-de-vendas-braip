@@ -15,7 +15,8 @@ export default function Home() {
             <h1>Cannabis Gelow</h1>
           </div>
           <div className="subTitle">
-            <p>O gelow cannabis é feito com as melhores matérias primas do mercado. GelowCannabis importa
+            <p>
+              O gelow cannabis é feito com as melhores matérias primas do mercado. GelowCannabis importa
               diretamente da Marijane industria SA
             </p>
           </div>
@@ -70,4 +71,23 @@ const Section = styled.section`
   min-height: 100vh;
   background-size: cover;
   position: relative;
+
+  .content img {
+    width: 40px;
+    height: auto;
+  }
+
+  .home {
+    height: 100%;
+    .content {
+      display: flex;
+      flex-direction: column; /* Correção aqui */
+      align-items: flex-start; /* Correção aqui */
+      width: 60%; /* Correção aqui */
+      color: #fff;
+      gap: 1.2rem;
+      margin-top: 0; /* Correção aqui */
+      padding-left: 18rem;
+    }
+  }
 `;
