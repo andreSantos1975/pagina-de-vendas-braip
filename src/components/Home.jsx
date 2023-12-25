@@ -15,12 +15,14 @@ export default function Home() {
           <h1>Cannabis Gelow</h1>
         </div>
         <div className="subTitle">
+          <div className="icon">
+            <img src={play} alt='Play-Botton' />
+          </div>
           <p>
-            O gelow cannabis é feito com as melhores matérias primas do mercado. GelowCannabis importa
-            diretamente da Marijane industria SA
+            O gelow cannabis é feito com as melhores matérias primas do mercado. GelowCannabis importa diretamente da Marijane 
+            industria SA
           </p>
         </div>
-        <img src={play} alt='Play-Botton' />
       </div>
     </div>
       <div className="info">
@@ -28,36 +30,36 @@ export default function Home() {
           <div className="col">
             <strong>Academy</strong>
             <p>
-            travel in flowers
+              travel in flowers
             </p>
           </div>
           <div className="col">
             <strong>Email</strong>
             <p>
-            travelinflowers@gmail.com
+              travelinflowers@gmail.com
             </p>
           </div>
           <div className="col">
             <strong>Mobile</strong>
             <p>
-            +5561991637838
+              +5561991637838
             </p>
           </div>
           <div className="col">
             <strong>Address</strong>
-           <p>322 Long Fly</p>
-           <p>997773 India</p>
+            <p>322 Long Fly</p>
+            <p>997773 India</p>
           </div>
           <div className="col">
             <strong>Services</strong>
-           <p>sparking</p>
-           <p>spa cream</p>
+            <p>sparking</p>
+            <p>spa cream</p>
           </div>
           <div className="col">
             <strong>Working Hours</strong>
-          <p>Working</p>
-          <p>monday to friday</p>
-          <p>08:00 as 17:00</p>
+            <p>Working</p>
+            <p>monday to friday</p>
+            <p>08:00 as 17:00</p>
           </div>
         </div>
       </div>
@@ -97,19 +99,25 @@ const Section = styled.section`
       }
 
       .subTitle {
-        p {
-          widht: 70%;
+        display: flex; /* Make the subTitle a flex container */
+        align-items: center; /* Align items vertically in the center */
         
+        .icon {
+          margin-right: 1rem; /* Adjust as needed */
+        }
+    
+        p {
+          width: 70%;
         }
       }
-    }
+    } // Move this closing brace to the correct position
+  }
 
-    .title,
-    .subTitle {
-      background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
-      padding: 10px; /* Espaçamento interno */
-      border-radius: 5px; /* Borda arredondada, ajuste conforme necessário */
-    }
+  .title,
+  .subTitle {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada, ajuste conforme necessário */
   }
 
   .info {
@@ -118,20 +126,16 @@ const Section = styled.section`
     right: 0;
     background-color: var(--secundary-color);
     padding: 4rem;
-   
-  
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Corrija aqui: grid-template-columns */
+      grid-template-columns: repeat(3, 1fr);
       background-color: rgb(33, 131, 34);
       color: #ffff;
       gap: 0.5rem;
-
-
     }
     .col {
       margin-right: 1.2rem; 
     }
   }
-  
 `;

@@ -28,36 +28,36 @@ export default function Home() {
           <div className="col">
             <strong>Academy</strong>
             <p>
-            travel in flowers
+              travel in flowers
             </p>
           </div>
           <div className="col">
             <strong>Email</strong>
             <p>
-            travelinflowers@gmail.com
+              travelinflowers@gmail.com
             </p>
           </div>
           <div className="col">
             <strong>Mobile</strong>
             <p>
-            +5561991637838
+              +5561991637838
             </p>
           </div>
           <div className="col">
             <strong>Address</strong>
-           <p>322 Long Fly</p>
-           <p>997773 India</p>
+            <p>322 Long Fly</p>
+            <p>997773 India</p>
           </div>
           <div className="col">
             <strong>Services</strong>
-           <p>sparking</p>
-           <p>spa cream</p>
+            <p>sparking</p>
+            <p>spa cream</p>
           </div>
           <div className="col">
             <strong>Working Hours</strong>
-          <p>Working</p>
-          <p>monday to friday</p>
-          <p>08:00 as 17:00</p>
+            <p>Working</p>
+            <p>monday to friday</p>
+            <p>08:00 as 17:00</p>
           </div>
         </div>
       </div>
@@ -81,13 +81,55 @@ const Section = styled.section`
     height: 100%;
     .content {
       display: flex;
-      flex-direction: column; /* Correção aqui */
-      align-items: flex-start; /* Correção aqui */
-      width: 60%; /* Correção aqui */
+      flex-direction: column;
+      align-items: flex-start;
+      width: 60%;
       color: #fff;
       gap: 1.2rem;
-      margin-top: 0; /* Correção aqui */
+      margin-top: 0;
       padding-left: 18rem;
+
+      .title {
+        h1 {
+          font-size: 5rem;
+          line-height: 5.3rem;
+        }
+      }
+
+      .subTitle {
+        p {
+          widht: 70%;
+        
+        }
+      }
+    }
+
+    .title,
+    .subTitle {
+      background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+      padding: 10px; /* Espaçamento interno */
+      border-radius: 5px; /* Borda arredondada, ajuste conforme necessário */
     }
   }
+
+  .info {
+    position: absolute;
+    bottom: -6rem;
+    right: 0;
+    background-color: var(--secundary-color);
+    padding: 4rem;
+   
+  
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Corrija aqui: grid-template-columns */
+      background-color: rgb(33, 131, 34);
+      color: #ffff;
+      gap: 0.5rem;
+}
+    .col {
+      margin-right: 1.2rem; 
+    }
+  }
+  
 `;
