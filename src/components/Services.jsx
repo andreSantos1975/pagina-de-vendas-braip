@@ -27,7 +27,7 @@ export default function Services() {
 
   return (
     <Section id='services'>
-      <Title value="services" />
+      <Title value="produtos" fontSize="1rem" />
       <div className="services">
         {data.map(({ type, text, image }, index) => {
           return (
@@ -56,7 +56,7 @@ const Section = styled.section`
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     height: 100%;
-    margin: 0 5rem;
+    margin: 0 9rem;
     margin-top: 5rem;
     gap: 5rem;
     &__service {
