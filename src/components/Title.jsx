@@ -1,7 +1,14 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
-export default function Title() {
+export default function Title({ value }) {
   return (
-    <div>Title</div>
-  )
+    <Div>
+      <h1>{value}</h1>
+    </ Div>
+  );
 }
+
+const Div = styled.div`
+   
+`;

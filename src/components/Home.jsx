@@ -1,49 +1,42 @@
 import React from 'react';
 import styled from 'styled-components';
 import home from '../asserts/home.png';
-//import cannabis from '../asserts/cannabis.jpg';
-import Navbar from './Navbar';
 import play from '../asserts/play.ico';
+import Navbar from './Navbar';
 
 export default function Home() {
   return (
     <Section id='home'>
-    <Navbar />
-    <div className="home">
-      <div className="content">
-        <div className="title">
-          <h1>Cannabis Gelow</h1>
-        </div>
-        <div className="subTitle">
-          <div className="icon">
-            <img src={play} alt='Play-Botton' />
+      <Navbar />
+      <div className="home">
+        <div className="content">
+          <div className="title">
+            <h1>Cannabis Gelow</h1>
           </div>
-          <p>
-            O gelow cannabis é feito com as melhores matérias primas do mercado. GelowCannabis importa diretamente da Marijane 
-            industria SA
-          </p>
+          <div className="subTitle">
+            <div className="icon">
+              <img src={play} alt='Play-Botton' />
+            </div>
+            <p>
+              O gelow cannabis é feito com as melhores matérias primas do mercado. GelowCannabis importa diretamente da Marijane
+              industria SA
+            </p>
+          </div>
         </div>
       </div>
-    </div>
       <div className="info">
         <div className="grid">
           <div className="col">
             <strong>Academy</strong>
-            <p>
-              travel in flowers
-            </p>
+            <p>travel in flowers</p>
           </div>
           <div className="col">
             <strong>Email</strong>
-            <p>
-              travelinflowers@gmail.com
-            </p>
+            <p>travelinflowers@gmail.com</p>
           </div>
           <div className="col">
             <strong>Mobile</strong>
-            <p>
-              +5561991637838
-            </p>
+            <p>+5561991637838</p>
           </div>
           <div className="col">
             <strong>Address</strong>
@@ -64,8 +57,7 @@ export default function Home() {
         </div>
       </div>
     </Section>
-  )
-
+  );
 }
 
 const Section = styled.section`
@@ -90,34 +82,27 @@ const Section = styled.section`
       gap: 1.2rem;
       margin-top: 0;
       padding-left: 18rem;
-
-      .title {
-        h1 {
-          font-size: 5rem;
-          line-height: 5.3rem;
-        }
-      }
-
-      .subTitle {
-        display: flex; /* Make the subTitle a flex container */
-        align-items: center; /* Align items vertically in the center */
-        
-        .icon {
-          margin-right: 1rem; /* Adjust as needed */
-        }
-    
-        p {
-          width: 70%;
-        }
-      }
-    } // Move this closing brace to the correct position
+    }
   }
 
   .title,
   .subTitle {
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
-    padding: 10px; /* Espaçamento interno */
-    border-radius: 5px; /* Borda arredondada, ajuste conforme necessário */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .subTitle {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-right: 1rem;
+    }
+
+    p {
+      width: 70%;
+    }
   }
 
   .info {
@@ -126,6 +111,7 @@ const Section = styled.section`
     right: 0;
     background-color: var(--secundary-color);
     padding: 4rem;
+    z-index: 1; /* Adicionado z-index para garantir que a informação fique acima do fundo */
 
     .grid {
       display: grid;
@@ -134,8 +120,10 @@ const Section = styled.section`
       color: #ffff;
       gap: 0.5rem;
     }
+
     .col {
-      margin-right: 1.2rem; 
+      margin-right: 1.2rem;
     }
   }
 `;
+

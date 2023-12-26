@@ -34,13 +34,13 @@ export default function Services() {
             <div className="services__service" key={index}>
               <div className="services__service__image">
                 <img src={image} alt='Services' />
-                <img src={play} alt='Readmore' className="play-icon" />
               </div>
               <div className="services__service__title">
                 <span>0{index + 1}</span>
                 <h2>{type}</h2>
               </div>
               <div className="services__service__description">{text}</div>
+              <img src={play} alt='Readmore' />
             </div>
           )
         })}
@@ -56,7 +56,7 @@ const Section = styled.section`
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     height: 100%;
-    margin: 0 5rem;
+    margin: 0 6rem;
     margin-top: 5rem;
     gap: 5rem;
     &__service {
@@ -86,21 +86,13 @@ const Section = styled.section`
         h2 {
           font-size: 3rem;
           line-height: 2.5rem;
-          margin-bottom: 5rem; // Corrigido de "margim" para "margin"
-          color: var(--secundary-color);
+          margim-bottom: 5rem;
+          color: var(secundary-color);
         }
       }
-      &__description {
-        color: var(--primary-color);
-        margin-bottom: 2rem;
-      }
-    }
-    .services__service__image {
-      margin-bottom: 3rem;
-      
-      .play-icon {
-        width: 40px; // Ajuste o tamanho conforme necessário
-        height: auto;
+      &__descripion {
+        color: var(primary-color);
+        margim-bottom: 2rem;
       }
     }
   }
