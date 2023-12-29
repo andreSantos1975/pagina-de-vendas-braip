@@ -21,7 +21,7 @@ export default function Blog() {
     {
       title: "CDB NATURAL",
       type: "CDB",
-      descripton: "As flores de CDB possue o necessário para acabar com a depressão"
+      descripton: "As flores de CDB possue o necessário para acabar"
     },
   ];
   return (
@@ -63,7 +63,7 @@ const Section = styled.section`
 
     .blog {
       .image {
-        margin-top: -44px;
+        margin-top: -64px; /* A margem negativa esta subindo a seção para o top */
         height: 15rem;
         background: url(${home}) no-repeat center center;
         background-size: cover;
@@ -73,37 +73,56 @@ const Section = styled.section`
 
         .title {
           text-align: center;
+          h3 {
+            color: var(--secundary-color);
+            font-size: 1.5rem;
+          }
         }
 
         .type,
         .description,
         .more {
-          color: black; /* Set text color */
+          color: black; /* Configura a cor da descrição */
           text-align: center;
         }
 
         h1 {
-          margin-top: 480px;
+          margin-top: 480px; /* Move o title, type e description para baixo da imagem home */
+          color: var(--secondary-color);
+          font-size: 1.5rem;
         }
 
         .type {
           font-size: 1rem;
+          color: var(--primary-color);
+          font-weight: bolder; 
+          text-transform: uppercase; 
         }
+        
 
         .description {
           font-size: 1rem;
+          height: 10rem;
         }
 
         .more {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-top: 1rem;
+          margin-top: -6rem; /* Move a div more para o margin-top */
+          color: var(--secondary-color);
 
           img {
             margin-bottom: 0.5rem;
             width: 45px; 
             height: 45px; 
+            gap: 1rem;
+            cursor: pointer;
+            span {
+              latter-spancing: 0.1rem;
+              text-transform: uppercase; 
+             
+            }
           }
         }
       }
