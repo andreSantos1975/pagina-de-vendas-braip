@@ -11,7 +11,7 @@ export default function Blog() {
     {
       title: "MARIJANE CANNABIS",
       type: "THC",
-      descripton: "Os produtos MARIJANE CANNABIS tem o delta 90 janne"
+      descripton: "Os produtos MARIJANE CANNABIS tem o delta 90 extraídos com inteligência artificial de flores de blue janne"
     },
     {
       title: "COLHEITA DAS FLORES",
@@ -63,7 +63,6 @@ const Section = styled.section`
 
     .blog {
       .image {
-        margin-top: -44px;
         height: 15rem;
         background: url(${home}) no-repeat center center;
         background-size: cover;
@@ -83,7 +82,7 @@ const Section = styled.section`
         }
 
         h1 {
-          margin-top: 480px;
+          margin-top: 445px;
         }
 
         .type {
@@ -102,8 +101,6 @@ const Section = styled.section`
 
           img {
             margin-bottom: 0.5rem;
-            width: 45px; 
-            height: 45px; 
           }
         }
       }
