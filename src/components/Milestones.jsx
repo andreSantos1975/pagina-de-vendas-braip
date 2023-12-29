@@ -1,6 +1,6 @@
 import React from 'react';
 import milestones from '../asserts/milestones.png';
-import milestones2 from '../asserts/milestones2.png';
+import milestones2 from '../asserts/milestones4.png';
 import milestones3 from '../asserts/milestones3.png';
 import milestones_background from '../asserts/coin-bacground.png';
 import styled from 'styled-components';
@@ -85,6 +85,19 @@ img {
   align-items: center;
   gap: 1rem; /* Ajuste o valor conforme necessário */
   justify-content: center;
+  gap: 2rem;
+  p {
+    font-size: 5rem;
+    font-weight: bolder;
+    line-weight: 3rem;
+  }
+  span {
+    text-transform: uppercase;
+    color: #fffffffc7;
+  }
+  img {
+    height: 6rem;
+  }
 }
 
 `;
