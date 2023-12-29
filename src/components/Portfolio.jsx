@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import icon2 from '../asserts/icon2.ico';
 import portfolio from '../asserts/portfolio.png';
 import portfolio2 from '../asserts/canhamo.png';
-
 import portfolio4 from '../asserts/portfolio4.png';
 import portfolio5 from '../asserts/portfolio5.png';
 import portfolio6 from '../asserts/portfolio7.png';
@@ -82,6 +80,7 @@ const Section = styled.section`
       grid-area: six;
       background: url(${portfolio5}) no-repeat right center;
       background-size: cover;
+      z-index: 10;
     }
     &:nth-of-type(6) {
       grid-area: five;
@@ -94,9 +93,11 @@ const Section = styled.section`
       background-size: cover;
     }
     &:nth-of-type(8) {
+      z-index: 10;
       grid-area: eight;
       background: url(${portfolio8}) no-repeat right center;
       background-size: cover;
+      height: 100%;
     }
     &:nth-of-type(9) {
       grid-area: nine;
@@ -104,12 +105,12 @@ const Section = styled.section`
       background-size: cover;
     }
     &:nth-of-type(10) {
-      grid-area: dez;
+      grid-area: ten;
       background: url(${portfolio9}) no-repeat right center;
       background-size: cover;
     }
     &:nth-of-type(11) {
-      grid-area: onze;
+      grid-area: eleven;
       background: url(${portfolio9}) no-repeat right center;
       background-size: cover;
     }
@@ -136,4 +137,17 @@ const Section = styled.section`
       height: auto;
     }
   }
+  .portfolio.more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 4rem 0;
+    span {
+      color: green;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+    }
+  }
+  
 `;

@@ -72,7 +72,7 @@ const Section = styled.section`
           }
         }
         .services__service__description {
-          color: #ffff;
+          color: #fff;
         }
       }
       &__image {
