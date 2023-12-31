@@ -4,8 +4,6 @@ import play from '../asserts/play.ico';
 import home from '../asserts/home.png';
 import Title from './Title';
 
-// ...
-
 export default function Blog() {
   const blogData = [
     {
@@ -26,10 +24,10 @@ export default function Blog() {
   ];
   return (
     <Section id='blog'>
-       <Title value='Blog'/>
-       <div className="blogs">
-         {blogData.map(({title, type, descripton}) =>{
-          return(
+      <Title value='Blog' />
+      <div className="blogs">
+        {blogData.map(({ title, type, descripton }) => {
+          return (
             <div className="blog" key={title}>
               <div className="image">
                 <div className="title">
@@ -46,8 +44,8 @@ export default function Blog() {
               </div>
             </div>
           )
-         })}
-       </div>
+        })}
+      </div>
     </Section>
   )
 }
@@ -111,6 +109,7 @@ const Section = styled.section`
           align-items: center;
           margin-top: -6rem; /* Move a div more para o margin-top */
           color: var(--secondary-color);
+          
 
           img {
             margin-bottom: 0.5rem;

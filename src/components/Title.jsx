@@ -14,6 +14,7 @@ const Div = styled.div`
    h1 {
     position: absolute;
     transform: translateX(-30%) translateY(20vw) rotate(-90deg);
+    margin-top:20px;
     font-size: 5rem;
     text-transform: uppercase;
     color: var(--secondary-color);

@@ -24,9 +24,9 @@ export default function Portfolio() {
         <div className="grid-box double" style={{ background: `url(${portfolio6}) no-repeat right center`, backgroundSize: 'cover', width: '100%' }} />
         <div className="grid-box" style={{ background: `url(${portfolio7}) no-repeat right center`, backgroundSize: 'cover' }} />
         <div className="grid-box" style={{ background: `url(${portfolio8}) no-repeat right center`, backgroundSize: 'cover' }} />
-        <div className="grid-box" style={{ background: `url(${portfolio9}) no-repeat right center`, backgroundSize: 'cover' }} />
-        <div className="grid-box" style={{ background: `url(${portfolio10}) no-repeat right center`, backgroundSize: 'cover' }} />
-        <div className="grid-box double" style={{ background: `url(${portfolio11}) no-repeat right center`, backgroundSize: 'cover', width: '100%' }} />
+        {/*<div className="grid-box" style={{ background: `url(${portfolio9}) no-repeat right center`, backgroundSize: 'cover' }} />*/}
+        {/*<div className="grid-box" style={{ background: `url(${portfolio10}) no-repeat right center`, backgroundSize: 'cover' }} />*/}
+        {/*<div className="grid-box double" style={{ background: `url(${portfolio11}) no-repeat right center`, backgroundSize: 'cover', width: '100%' }} />*/}
       </div>
       <div className="portfolio more">
         <span>Load More</span>

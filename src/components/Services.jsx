@@ -86,7 +86,7 @@ const Section = styled.section`
         h2 {
           font-size: 3rem;
           line-height: 2.5rem;
-          margin-bottom: 5rem; // Corrigido de "margim" para "margin"
+          margin-bottom: 5rem;
           color: var(--secundary-color);
         }
       }
@@ -99,8 +99,9 @@ const Section = styled.section`
       margin-bottom: 3rem;
       
       .play-icon {
-        width: 40px; // Ajuste o tamanho conforme necessário
+        width: 40px; 
         height: auto;
+        cursor: pointer;
       }
     }
   }
