@@ -143,20 +143,23 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-top: 34px;
+  height: 300px;;
+  background-color: var(--secondary-color);
 
   .title {
     margin-top: 5rem; 
     margin-left: 12rem; 
     font-size: 2rem; 
     font-weight: bold; 
-    color: var(--primary-color); 
+    color: #fff; 
   }
 
   .descriptions {
     margin-top: 1rem; 
     margin-left: 12rem; 
     font-size: 1.5rem; 
-    color: var(--secundary-color);
+    color: #fff; 
   }
   &__content {
     display: flex;
