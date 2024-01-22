@@ -9,25 +9,21 @@ import portfolio6 from '../asserts/portfolio7.png';
 import portfolio7 from '../asserts/coin.jpg';
 import portfolio8 from '../asserts/portfolio8.png';
 import portfolio9 from '../asserts/portfolio9.png';
-//import portfolio10 from '../asserts/portfolio10.png';
-//import portfolio11 from '../asserts/portfolio3.png';
-import { motion } from 'framer-motion';
-import { useScroll } from './UseScroll';
-import { portfolioAnimations } from 'animation';
+import portfolio10 from '../asserts/portfolio10.png';
+import portfolio11 from '../asserts/portfolio3.png';
 
 
 export default function Portfolio() {
-  const [element, controls] = useScroll();
   return (
-    <Section ref={element}>
+    <Section>
       <div className="grid">
-        <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box" style={{ background: `url(${portfolio}) no-repeat right center`, backgroundSize: 'cover' }} />
-        <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box" style={{ background: `url(${portfolio2}) no-repeat right center`, backgroundSize: 'cover' }} />
-        <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box" style={{ background: `url(${portfolio4}) no-repeat right center`, backgroundSize: 'cover' }} />
-        <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box double" style={{ background: `url(${portfolio5}) no-repeat right center`, backgroundSize: 'cover' }} />
-        <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box double" style={{ background: `url(${portfolio6}) no-repeat right center`, backgroundSize: 'cover', width: '100%' }} />
-        <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box" style={{ background: `url(${portfolio7}) no-repeat right center`, backgroundSize: 'cover' }} />
-        <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box" style={{ background: `url(${portfolio8}) no-repeat right center`, backgroundSize: 'cover' }} />
+        <div className="grid-box" style={{ background: `url(${portfolio}) no-repeat right center`, backgroundSize: 'cover' }} />
+        <div className="grid-box" style={{ background: `url(${portfolio2}) no-repeat right center`, backgroundSize: 'cover' }} />
+        <div className="grid-box" style={{ background: `url(${portfolio4}) no-repeat right center`, backgroundSize: 'cover' }} />
+        <div className="grid-box double" style={{ background: `url(${portfolio5}) no-repeat right center`, backgroundSize: 'cover' }} />
+        <div className="grid-box double" style={{ background: `url(${portfolio6}) no-repeat right center`, backgroundSize: 'cover', width: '100%' }} />
+        <div className="grid-box" style={{ background: `url(${portfolio7}) no-repeat right center`, backgroundSize: 'cover' }} />
+        <div className="grid-box" style={{ background: `url(${portfolio8}) no-repeat right center`, backgroundSize: 'cover' }} />
         {/*<div className="grid-box" style={{ background: `url(${portfolio9}) no-repeat right center`, backgroundSize: 'cover' }} />*/}
         {/*<div className="grid-box" style={{ background: `url(${portfolio10}) no-repeat right center`, backgroundSize: 'cover' }} />*/}
         {/*<div className="grid-box double" style={{ background: `url(${portfolio11}) no-repeat right center`, backgroundSize: 'cover', width: '100%' }} />*/}

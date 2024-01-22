@@ -4,8 +4,13 @@ import milestones2 from '../asserts/milestones4.png';
 import milestones3 from '../asserts/milestones3.png';
 import milestones_background from '../asserts/coin-bacground.png';
 import styled from 'styled-components';
+import { useScroll } from 'components/UseScroll';
+import { motion } from 'framer-motion';
+import { milestonesAnimations } from 'animation';
 
 export default function Milestones() {
+  const [element, controls] = useScroll();
+
   const milestone = [
     {
       image: milestones,
@@ -24,7 +29,7 @@ export default function Milestones() {
     },
   ]
   return (
-    <Section>
+    <Section ref={element}>
       <div className="background">
         <img src={milestones_background} alt='milestone background' />
       </div>
@@ -32,11 +37,19 @@ export default function Milestones() {
         {
           milestone.map(({ image, data, amount }) => {
             return (
-              <div className="milestone" key={amount}>
+              <motion.div className="milestone" key={amount}
+                variants={milestonesAnimations}
+                animate={controls}
+                transition={{
+                  delay: 0.03,
+                  type: 'tween',
+                  duration: 0.8,
+                }}
+              >
                 <p>{amount}</p>
                 <span>{data}</span>
                 <img src={image} alt="Milestone" />
-              </div>
+              </motion.div>
             );
           })
         }
