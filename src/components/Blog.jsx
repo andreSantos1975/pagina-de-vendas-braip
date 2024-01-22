@@ -3,8 +3,13 @@ import styled from 'styled-components';
 import play from '../asserts/play.ico';
 import home from '../asserts/home.png';
 import Title from './Title';
+import { useScroll } from 'components/UseScroll';
+import { motion } from 'framer-motion';
+import { blogsAnimation } from 'animation';
 
 export default function Blog() {
+  const [element, controls] = useScroll();
+
   const blogData = [
     {
       title: "MARIJANE CANNABIS",
@@ -23,12 +28,21 @@ export default function Blog() {
     },
   ];
   return (
-    <Section id='blog'>
+    <Section id='blog' ref={element}>
       <Title value='Blog' />
       <div className="blogs">
         {blogData.map(({ title, type, descripton }) => {
           return (
-            <div className="blog" key={title}>
+            <motion.div className="blog" 
+              key={title}
+              variants={blogsAnimation}
+              animate={controls}
+              transition={{
+                delay: 0.03,
+                type: 'tween',
+                duration: 0.8
+              }}
+            >
               <div className="image">
                 <div className="title">
                   <h1>{title}</h1>
@@ -42,7 +56,7 @@ export default function Blog() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           )
         })}
       </div>
