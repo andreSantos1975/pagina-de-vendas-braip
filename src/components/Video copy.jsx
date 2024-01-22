@@ -22,7 +22,7 @@ export default function Video() {
     <Section id='section'>
       <div className="background">
         <div className="video">
-        
+          <YouTube videoId={videoId} opts={opts} onReady={onReady} />
         </div>
         <TextInfo>
           <p>

@@ -5,8 +5,12 @@ import play from '../asserts/play.ico';
 import services from '../asserts/folha1.png';
 import services2 from '../asserts/folha2.png';
 import services3 from '../asserts/folha3.png';
+import { useScroll } from 'components/UseScroll';
+import { motion } from 'framer-motion';
+import { servicesAnimations } from 'animation';
 
 export default function Services() {
+  const [element, controls] = useScroll();
   const data = [
     {
       type: "Blowout",
@@ -26,12 +30,20 @@ export default function Services() {
   ];
 
   return (
-    <Section id='services'>
+    <Section id='services' ref={element}>
       <Title value="produtos" fontSize="1rem" />
       <div className="services">
         {data.map(({ type, text, image }, index) => {
           return (
-            <div className="services__service" key={index}>
+            <motion.div className="services__service" key={index}
+              variants={servicesAnimations}
+              animate={controls}
+              transition={{
+                delay: 0.03,
+                type: "tween",
+                duration: 0.8,
+              }}
+            >
               <div className="services__service__image">
                 <img src={image} alt='Services' />
                 <img src={play} alt='Readmore' className="play-icon" />
@@ -41,7 +53,7 @@ export default function Services() {
                 <h2>{type}</h2>
               </div>
               <div className="services__service__description">{text}</div>
-            </div>
+            </motion.div>
           )
         })}
       </div>

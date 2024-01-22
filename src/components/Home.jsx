@@ -3,12 +3,17 @@ import styled from 'styled-components';
 import home from '../asserts/home.png';
 import play from '../asserts/play.ico';
 import Navbar from './Navbar';
-
+import { motion } from 'framer-motion';
+import { homeAnimation, homeInfoAnimation  } from 'animation';
+ 
 export default function Home() {
   return (
     <Section id='home'>
       <Navbar />
-      <div className="home">
+      <motion.div className="home"
+      variants={homeAnimation}
+      transition={{ delay: 0.3, duration: 0.6, type: "tween" }}
+      >
         <div className="content">
           <div className="title">
             <h1>Cannabis Gelow</h1>
@@ -23,8 +28,11 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
-      <div className="info">
+      </motion.div>
+      <motion.div className="info"
+        variants={homeInfoAnimation}
+        transition={{ delay: 0.3, duration: 0.6, type: "tween" }}
+      >
         <div className="grid">
           <div className="col">
             <strong>Academy</strong>
@@ -55,7 +63,7 @@ export default function Home() {
             <p>08:00 as 17:00</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Section>
   );
 }
