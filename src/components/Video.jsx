@@ -1,29 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
-import YouTube from 'react-youtube';
+import { useScroll } from './UseScroll';
+import { motion } from 'framer-motion';
+import { videoAnimations } from 'animation';
 
 export default function Video() {
+  const [element, controls] = useScroll();
+
   const videoId = 'qaQm9_3LyWk';
 
-  const opts = {
-    height: '300',
-    width: '480',
-    playerVars: {
-      autoplay: 1,
-    },
-  };
-
-  const onReady = (event) => {
-    // acessar o player (event.target) se necessário
-    event.target.playVideo();
-  };
-
   return (
-    <Section id='section'>
+    <Section id='section' ref={element}>
       <div className="background">
-        <div className="video">
-        
-        </div>
+        <motion.div className="video"
+          variants={videoAnimations}
+          animate={controls}
+          transition={{
+            delay: 0.03,
+            type: 'tween',
+            duration: 0.8,
+          }}
+        >
+          <iframe
+            title="YouTube Video"
+            width="480"
+            height="300"
+            src={`https://www.youtube.com/embed/${videoId}`}
+            allowFullScreen
+          ></iframe>
+        </motion.div>
         <TextInfo>
           <p>
             Seu texto informativo aqui. Pode incluir detalhes sobre o vídeo ou qualquer outra informação relevante.
@@ -57,9 +62,9 @@ const TextInfo = styled.div`
   max-width: 300px;
   
   p {
-    font-family: 'Poppins', sans-serif; /* Use Poppins e fallback para sans-serif se Poppins não estiver disponível */
-    font-size: 16px; /* Tamanho da fonte */
-    line-height: 1.5; /* Espaçamento entre linhas */
-    margin-bottom: 16px; /* Espaçamento inferior */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
   }
 `;

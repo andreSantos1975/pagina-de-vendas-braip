@@ -4,8 +4,12 @@ import Title from './Title';
 //import princing from '../asserts/carvalho.jpg';
 //import princing2 from '../asserts/agua-viva.jpg';
 import play from '../asserts/play.ico';
+import { useScroll } from 'components/UseScroll';
+import { motion } from 'framer-motion';
+import {princingAnimation} from 'animation';
 
 export default function Princing() {
+  const [element, controls] = useScroll();
   const plans = [
     {
       name: "Basic",
@@ -61,7 +65,7 @@ export default function Princing() {
   ];
 
   return (
-    <Section>
+    <Section ref={element}>
       <Title value='princing' />
       {/*<div className="background">
         <img src={princing} alt='background' className='bg2' />
@@ -74,7 +78,15 @@ export default function Princing() {
       <div className="princing">
         {plans.map(({ name, price }, index) => {
           return (
-            <div className="princing__plan" key={index}>
+            <motion.div className="princing__plan" key={index}
+             variants={princingAnimation}
+             animate={controls}
+             transition={{
+              delay: 0.03,
+              type: 'tween',
+              duration: 0.8,
+            }}
+            >
               <div className="princing__plan__name">
                 <h2>{name}</h2>
                 <div className="princing__plan_name__price">
@@ -111,7 +123,7 @@ export default function Princing() {
                   <img className="order-now-icon" src={play} alt='Order Now' />
                 </div>
               </div>
-            </div>
+            </motion.div>
           )
         })}
       </div>
