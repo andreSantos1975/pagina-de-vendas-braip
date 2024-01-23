@@ -23,21 +23,22 @@ const Div = styled.div`
     visibility: hidden;
   }
   a {
-    position fixed;
-    botton: 40px;
+    position: fixed;
+    bottom: 40px;  
     right: 40px;
     background-color: var(--secondary-color);
     padding: 1rem;
     border-radius: 100%;
     display: flex;
     justify-content: center;
-    align: center;
+    align-items: center; 
     z-index: 1;
     transition: 0.4s ease-in-out;
-
+  
     svg {
       color: #fff;
       font-size: 1.4rem;
     }
   }
+  
 `;

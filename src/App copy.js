@@ -1,5 +1,5 @@
 import React from 'react';
-import ScrollToTop from './components/ScrollToTop';
+import  ScrollToTop  from './components/ScrollToTop';
 import Home from './components/Home';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
@@ -16,6 +16,8 @@ import { motion } from 'framer-motion';
 export const App = () => {
   return (
     <motion.div initial="hidden" animate="show">
+
+      <ScrollToTop />
       <Home />
       <Services />
       <Portfolio />
@@ -27,7 +29,6 @@ export const App = () => {
       <Skills />
       <Contact />
       <Footer />
-      <ScrollToTop />
     </motion.div>
   )
 }

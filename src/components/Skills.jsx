@@ -1,8 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Title from './Title';
+import { motion } from 'framer-motion';
+import { useScroll } from './UseScroll';
+import { skillsBarAnimation } from 'animation';
 
 export default function Skills() {
+  const [element, controls] = useScroll();
   const skillsData = [
     {
       name: "Facial",
@@ -27,7 +31,7 @@ export default function Skills() {
   ];
 
   return (
-    <Section id="skills">
+    <Section id="skills" ref={element}>
       <Title value='skills' />
       <div className="skills__title">
         <p>Our Skills</p>
@@ -38,13 +42,21 @@ export default function Skills() {
           {
            skillsData.map(({ name, amount }) => {
             return (
-              <div className="skills__bar__bar" key={name}>
+              <motion.div className="skills__bar__bar" key={name}
+              variants={skillsBarAnimation}
+              animate={controls}
+              transition={{
+                delay: 0.03,
+                type: 'tween',
+                duration: 0.8
+              }}
+              >
                 <progress className="progress-bar" value={amount} max="100" />
                 <div className="label-container">
                   <span>{name}</span>
                 </div>
                 <h3>{amount}%</h3>
-              </div>
+              </motion.div>
             );
           })
           }
