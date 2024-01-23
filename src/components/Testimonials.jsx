@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import loadmore from '../asserts/icon2.ico';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { useScroll } from './UseScroll';
+import { portfolioAnimations } from 'animation';
 
 export default function Testimonials() {
-
+  const [element, controls] = useScroll();
   const [selected, setSelected] = useState(0);
+
   const testimonials = [
     {
       designation: 'SPA',
@@ -23,16 +27,24 @@ export default function Testimonials() {
     },
   ]
   return (
-    <Section>
+    <Section ref={element}>
       <div className="container">
-        <div className="testimonials">
+        <motion.div className="testimonials"
+          variants={portfolioAnimations}
+          animate={controls}
+          transition={{
+            delay: 0.03,
+            type: 'tween',
+            duration: 0.8
+          }}
+        >
           {
             testimonials.map(({ designation, name, review }, index) => {
               return (
                 <div className={`testimonials ${selected === index ? "active" : "hidden"}`} key={index}>
                   <div className="image">
                     <div className="cicle2">
-                    <img src={loadmore} className='img__icon2' alt='Loadmore ' />
+                      <img src={loadmore} className='img__icon2' alt='Loadmore ' />
                     </div>
                   </div>
                   <div className="title-container">
@@ -46,8 +58,16 @@ export default function Testimonials() {
               );
             })
           }
-        </div>
-        <div className="controls">
+        </motion.div>
+        <motion.div className="controls"
+           variants={portfolioAnimations}
+           animate={controls}
+           transition={{
+             delay: 0.03,
+             type: 'tween',
+             duration: 0.8
+           }}
+        >
           <button
             className={selected === 0 ? "active" : ""}
             onClick={() =>
@@ -63,7 +83,7 @@ export default function Testimonials() {
             onClick={() =>
               setSelected(2)}>
           </button>
-        </div>
+        </motion.div>
       </div>
     </Section>
   )

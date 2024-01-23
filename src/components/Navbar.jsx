@@ -72,9 +72,7 @@ const Nav = styled(motion.nav)`
       display: flex;
       gap: 3rem;
       .active {
-        a {
-          border-bottom: 0.2rem solid var(--secondary-color);
-        }
+   
       }
       li {
         a {
