@@ -9,7 +9,7 @@ export default function ScrollToTop() {
   })
   return (
     <div>
-      <a href="#" className={`${visible ? "block" : "none"}`}>
+      <a href="#home" className={`${visible ? "block" : "none"}`}>
         <FaChevronUp />
       </a>
     </div>

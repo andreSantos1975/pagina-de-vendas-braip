@@ -19,7 +19,7 @@ import { portfolioAnimations } from 'animation';
 export default function Portfolio() {
   const [element, controls] = useScroll();
   return (
-    <Section ref={element}>
+    <Section id='portfolio' ref={element}>
       <div className="grid">
         <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box" style={{ background: `url(${portfolio}) no-repeat right center`, backgroundSize: 'cover' }} />
         <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box" style={{ background: `url(${portfolio2}) no-repeat right center`, backgroundSize: 'cover' }} />
