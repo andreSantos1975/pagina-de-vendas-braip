@@ -40,12 +40,12 @@ export default function Contact() {
             </p>
           </div>
           <FormContainer>
-            <h4>Get in Touch</h4>
+            <h4>Entrar em contato</h4>
             <Form>
-              <Input type='text' placeholder='Your Name' />
-              <Input type='email' placeholder='Your Email' />
-              <Textarea placeholder='Your Message' />
-              <SubmitButton>Send Message</SubmitButton>
+              <Input type='text' placeholder='Seu nome' />
+              <Input type='email' placeholder='Seu email' />
+              <Textarea placeholder='Sua mensagem' />
+              <SubmitButton>Enviar mensagem</SubmitButton>
             </Form>
           </FormContainer>
         </div>
@@ -149,6 +149,6 @@ const SubmitButton = styled.button`
   font-size: 16px;
 
   &:hover {
-    background-color: #555; // Altere para a cor desejada
+    background-color: #40E0D0; // Altere para a cor desejada
   }
 `;

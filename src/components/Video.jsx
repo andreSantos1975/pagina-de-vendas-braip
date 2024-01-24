@@ -40,7 +40,7 @@ export default function Video() {
 }
 
 const Section = styled.section`
-  background-color: #006400;
+  background-color: #FF1493;
   height: 120vh;
   display: flex;
   justify-content: center;

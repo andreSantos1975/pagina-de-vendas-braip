@@ -12,10 +12,12 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { motion } from 'framer-motion';
+import ScrollToTopWhatsApp from './components/ScrollToTopWhatsApp';
 
 export const App = () => {
   return (
     <motion.div initial="hidden" animate="show">
+      <ScrollToTopWhatsApp />
       <Home />
       <Services />
       <Portfolio />

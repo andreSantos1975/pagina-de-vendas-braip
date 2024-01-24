@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import loadmore from '../asserts/icon2.ico';
+//import loadmoreImage from '../asserts/loadmore.jpg'; // Substitua o caminho pela sua imagem
+import image1 from '../asserts/image1.jpg';
+import image2 from '../asserts/image2.jpg';
+import image3 from '../asserts/image3.jpg';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useScroll } from './UseScroll';
@@ -13,19 +17,23 @@ export default function Testimonials() {
     {
       designation: 'SPA',
       name: 'Julia Beatriz',
-      review: 'After I started using gerard cannabis I no longer feel back pain. Im going to buy five so I dont run out of them in my stock. ',
+      review: 'After I started using gerard cannabis I no longer feel back pain. Im going to buy five so I dont run out of them in my stock.',
+      image: image1,
     },
     {
       designation: 'FULL',
       name: 'Flavio Antônio',
       review: 'Feel back pain. Im going to by ffive so I dont run out of then in my stock.',
+      image: image2,
     },
     {
       designation: 'SAIN',
       name: 'Lotus Marquense',
-      review: 'Cannabis I no longer feel back pain. Im going to buy five so I dont run out of them in my stock.  them in my stock. ',
+      review: 'Cannabis I no longer feel back pain. Im going to buy five so I dont run out of them in my stock.  them in my stock.',
+      image: image3,
     },
-  ]
+  ];
+
   return (
     <Section ref={element}>
       <div className="container">
@@ -44,7 +52,7 @@ export default function Testimonials() {
                 <div className={`testimonials ${selected === index ? "active" : "hidden"}`} key={index}>
                   <div className="image">
                     <div className="cicle2">
-                      <img src={loadmore} className='img__icon2' alt='Loadmore ' />
+                      <img src={testimonials[index].image} className='img__icon2' alt={`Loadmore ${index}`} />
                     </div>
                   </div>
                   <div className="title-container">
@@ -60,13 +68,13 @@ export default function Testimonials() {
           }
         </motion.div>
         <motion.div className="controls"
-           variants={portfolioAnimations}
-           animate={controls}
-           transition={{
-             delay: 0.03,
-             type: 'tween',
-             duration: 0.8
-           }}
+          variants={portfolioAnimations}
+          animate={controls}
+          transition={{
+            delay: 0.03,
+            type: 'tween',
+            duration: 0.8
+          }}
         >
           <button
             className={selected === 0 ? "active" : ""}
@@ -123,11 +131,14 @@ const Section = styled.section`
           width: 6rem;
           border-radius: 10rem;
           background-color: #fff;
+        
           .img__icon2 {
-            height: 3rem;
-            width: 3rem;
+            height: 100%; /* Usar a altura completa do círculo2 */
+            width: 100%;  /* Usar a largura completa do círculo2 */
+            border-radius: 50%; /* Aplicar o border-radius para formar um círculo */
           }
-         }
+        }
+        
         }
       }
       .hidden {

@@ -28,9 +28,6 @@ export default function Portfolio() {
         <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box double" style={{ background: `url(${portfolio6}) no-repeat right center`, backgroundSize: 'cover', width: '100%' }} />
         <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box" style={{ background: `url(${portfolio7}) no-repeat right center`, backgroundSize: 'cover' }} />
         <motion.div variants={portfolioAnimations} animate={controls} transition={{ delay: 0.03, type: "tween", duration: 0.8 }} className="grid-box" style={{ background: `url(${portfolio8}) no-repeat right center`, backgroundSize: 'cover' }} />
-        {/*<div className="grid-box" style={{ background: `url(${portfolio9}) no-repeat right center`, backgroundSize: 'cover' }} />*/}
-        {/*<div className="grid-box" style={{ background: `url(${portfolio10}) no-repeat right center`, backgroundSize: 'cover' }} />*/}
-        {/*<div className="grid-box double" style={{ background: `url(${portfolio11}) no-repeat right center`, backgroundSize: 'cover', width: '100%' }} />*/}
       </div>
       <div className="portfolio more">
         <span>Load More</span>
@@ -148,7 +145,7 @@ const Section = styled.section`
     gap: 1rem;
     margin: 4rem 0;
     span {
-      color: green;
+      color: #40E0D0;
       letter-spacing: 0.1rem;
       text-transform: uppercase;
     }

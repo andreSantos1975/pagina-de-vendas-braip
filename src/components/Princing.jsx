@@ -177,18 +177,17 @@ const Section = styled.section`
     
   }
   .princing__title {
-  
     margin: 2rem 12rem;
     margin-left: 253px;
   
     p {
-      color: var(--secondary-color);
+      color: #40E0D0;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
       margin-left: 63px;
     }
-    h2 {
-      color: var(--primary-color);
+    h1 {
+      color: #40E0D0;
       font-size: 2rem;
     }
   }

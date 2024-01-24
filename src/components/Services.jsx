@@ -34,6 +34,7 @@ export default function Services() {
       <Title value="produtos" fontSize="1rem" />
       <div className="services">
         {data.map(({ type, text, image }, index) => {
+         
           return (
             <motion.div className="services__service" key={index}
               variants={servicesAnimations}
@@ -71,16 +72,19 @@ const Section = styled.section`
     margin: 0 9rem;
     margin-top: 5rem;
     gap: 5rem;
+    
     &__service {
       padding: 2rem;
+      
       &:nth-of-type(2) {
         background-color: var(--primary-color);
+        
         .services__service__title {
           span {
             color: #fff;
           }
           h2 {
-            color: green;
+            color: #40E0D0;
           }
         }
         .services__service__description {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BsFacebook, BsYoutube,  } from 'react-icons/bs';
+import { BsFacebook, BsYoutube, BsInstagram } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { useScroll } from './UseScroll';
 import { footerTextAnimation } from 'animation';
@@ -31,6 +31,7 @@ export default function Footer() {
       >
         <BsFacebook />
         <BsYoutube />
+        <BsInstagram />
       </motion.div>
     </Foot>
   )
@@ -44,6 +45,11 @@ const Foot = styled(motion.footer)`
   align-items: center;
   padding: 5rem 10rem;
   margin-top: 4px;
+
+  span {
+    margin-left: -96px;
+    font-size: 0.9rem;
+  }
 
   .footer__social__icons {
     display: flex;

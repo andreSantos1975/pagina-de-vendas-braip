@@ -48,7 +48,7 @@ export default function Skills() {
               transition={{
                 delay: 0.03,
                 type: 'tween',
-                duration: 0.8
+                duration: 1.3
               }}
               >
                 <progress className="progress-bar" value={amount} max="100" />
@@ -91,10 +91,10 @@ const Section = styled.section`
      p {
       text-transform: uppercase;
       letter-spacing: 0.2rem;
-      color: var(--primary-color);
+      color: #40E0D0;
      }
      h2 {
-      color: green;
+      color: #40E0D0;
       font-size: 2rem;
      }
 }
