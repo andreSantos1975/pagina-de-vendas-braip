@@ -55,29 +55,27 @@ const Section = styled.section`
     z-index: 10;
 
     iframe {
-      width: 550px;
-      height: 350px;
+      width: 100%;
+      height: 100%;
     }
   }
 `;
 
 const TextInfo = styled.div`
-z-index: 10;
-color: #fff;
-max-width: 300px;
-text-align: center;
-padding-left: 124px; 
+  z-index: 10;
+  color: #fff;
+  max-width: 300px;
+  text-align: center;
 
-p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 16px;
-}
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
 
   @media screen and (max-width: 600px) {
     margin-top: 2rem;
-    margin-left: 60px;
   }
 `;
 
@@ -87,8 +85,6 @@ const MobileTitle = styled.div`
   @media screen and (max-width: 600px) {
     display: block;
     margin-top: 1rem;
-    margin-left: 115px;
-  
     
     h2 {
       color: #fff;

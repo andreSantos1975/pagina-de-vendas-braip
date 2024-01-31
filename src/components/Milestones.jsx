@@ -27,42 +27,41 @@ export default function Milestones() {
       data: "Reviews",
       amount: "5.4K",
     },
-  ]
+  ];
+
   return (
     <Section ref={element}>
       <div className="background">
         <img src={milestones_background} alt='milestone background' />
       </div>
       <div className="milestones">
-        {
-          milestone.map(({ image, data, amount }) => {
-            return (
-              <motion.div className="milestone" key={amount}
-                variants={milestonesAnimations}
-                animate={controls}
-                transition={{
-                  delay: 0.03,
-                  type: 'tween',
-                  duration: 0.8,
-                }}
-              >
-                <p>{amount}</p>
-                <span>{data}</span>
-                <img src={image} alt="Milestone" />
-              </motion.div>
-            );
-          })
-        }
+        {milestone.map(({ image, data, amount }) => (
+          <motion.div
+            className="milestone"
+            key={amount}
+            variants={milestonesAnimations}
+            animate={controls}
+            transition={{
+              delay: 0.03,
+              type: 'tween',
+              duration: 0.8,
+            }}
+          >
+            <p>{amount}</p>
+            <span>{data}</span>
+            <img src={image} alt="Milestone" />
+          </motion.div>
+        ))}
       </div>
     </Section>
-  )
+  );
 }
 
 const Section = styled.section`
   height: 100vh;
   position: relative;
   overflow: hidden;
-  
+
   .background {
     position: absolute;
     left: 0;
@@ -70,63 +69,72 @@ const Section = styled.section`
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: rgba(30, 20, 15, 1); /* Cor com transparência usando rgba() */
+    background-color: rgba(30, 20, 15, 1);
 
-img {
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.3; /* Altere este valor para ajustar a transparência da imagem de fundo */
+      opacity: 0.3;
     }
   }
 
- .milestones {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  color: #fff;
-  align-items: center;
-  height: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.milestone {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem; /* Ajuste o valor conforme necessário */
-  justify-content: center;
-  gap: 2rem;
-  p {
-    font-size: 5rem;
-    font-weight: bolder;
-    line-weight: 3rem;
-  }
-  span {
-    text-transform: uppercase;
-    color: #fffffffc7;
-  }
-  img {
-    height: 6rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  padding: 5rem 2rem;
-
-  .background {
-    width: 100%;
-    height: 100%;
-  }
-
   .milestones {
-    grid-template-columns: 1fr;
-    gap: 5rem;
-    padding: 5rem 2rem; // Garante que o espaçamento seja consistente
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #fff;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
   }
-}
 
+  .milestone {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
+    p {
+      font-size: 5rem;
+      font-weight: bolder;
+      line-height: 3rem; // Corrigido para line-height
+    }
+    span {
+      text-transform: uppercase;
+      color: #fffffffc7;
+    }
+    img {
+      height: 6rem;
+    }
+  }
 
+  @media screen and (max-width: 600px) {
+    padding: 5rem 2rem;
+
+    .background {
+      width: 100%;
+      height: 100%;
+    }
+
+    .milestones {
+      grid-template-columns: 1fr;
+      gap: 2rem; // Reduzido o espaçamento para 2rem
+      padding: 2rem; // Ajustado o padding
+    }
+
+    .milestone {
+      p {
+        font-size: 3rem; // Ajustado o tamanho da fonte para dispositivos móveis
+        line-height: 2rem; // Ajustado o line-height para dispositivos móveis
+      }
+      img {
+        height: 4rem; // Ajustado a altura da imagem para dispositivos móveis
+      }
+    }
+  }
 `;
+

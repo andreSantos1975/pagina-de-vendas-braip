@@ -23,8 +23,8 @@ export default function Video() {
         >
           <iframe
             title="YouTube Video"
-            width="800" // Ajuste conforme necessário
-            height="500" // Ajuste conforme necessário
+            width="480"
+            height="300"
             src={`https://www.youtube.com/embed/${videoId}`}
             allowFullScreen
           ></iframe>
@@ -34,9 +34,6 @@ export default function Video() {
             Seu texto informativo aqui. Pode incluir detalhes sobre o vídeo ou qualquer outra informação relevante.
           </p>
         </TextInfo>
-        <MobileTitle>
-          <h2>Título no Dispositivo Móvel</h2>
-        </MobileTitle>
       </div>
     </Section>
   );
@@ -46,61 +43,32 @@ const Section = styled.section`
   background-color: #FF1493;
   height: 120vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
 
   .video {
     z-index: 10;
-
-    iframe {
-      width: 550px;
-      height: 350px;
-    }
+    margin-top: -75px;
+    margin-right: 320px;
   }
 `;
 
 const TextInfo = styled.div`
-z-index: 10;
-color: #fff;
-max-width: 300px;
-text-align: center;
-padding-left: 124px; 
-
-p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 16px;
-}
-
-  @media screen and (max-width: 600px) {
-    margin-top: 2rem;
-    margin-left: 60px;
-  }
-`;
-
-const MobileTitle = styled.div`
-  display: none;
-
-  @media screen and (max-width: 600px) {
-    display: block;
-    margin-top: 1rem;
-    margin-left: 115px;
+  z-index: 10;
+  margin-top: -220px;
+  margin-left: 580px;
+  color: #fff;
+  max-width: 300px;
   
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (max-width: 600px) {
     
-    h2 {
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      font-size: 24px;
-    }
   }
 `;
-
-
-
-
-
-
-

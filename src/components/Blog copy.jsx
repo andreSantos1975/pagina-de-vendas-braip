@@ -75,7 +75,7 @@ const Section = styled.section`
 
     .blog {
       .image {
-        height: 30rem; /* Ajuste a altura conforme necessário */
+        height: 15rem; /* Ajuste a altura conforme necessário */
         background-size: cover;
         display: flex;
         align-items: center;
