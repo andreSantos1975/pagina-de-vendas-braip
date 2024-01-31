@@ -121,4 +121,23 @@ const Section = styled.section`
       }
     }
   }
+  @media screen and (max-width: 600px) {
+    .services {
+      margin: 2rem 0;
+      grid-template-columns: 1fr; /* Altera a exibição para uma coluna em telas menores */
+      gap: 2rem;
+      paddint: 0 2rem;
+      margin-left: 1px; /* Ajusta a margem para o contêiner .services */
+    }
+  
+    .services__service {
+      padding: 2rem; /* Ajusta o padding para tornar a .services__service mais larga */
+    }
+  
+    /* Utiliza um seletor direto para o componente Title */
+    /* Certifique-se de ajustar o valor da margem conforme necessário */
+    h1 {
+      margin-left: -40px; /* Ajusta a margem para o título "produtos" */
+    }
+  }
 `;

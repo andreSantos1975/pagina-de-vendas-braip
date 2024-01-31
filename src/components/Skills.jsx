@@ -83,7 +83,7 @@ const Section = styled.section`
     h1 {
       color: #fff;
       font-size: 9rem;
-      z-index: 2;
+      z-index: 3;
     }
 }
 .skills__title {

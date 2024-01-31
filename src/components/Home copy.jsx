@@ -136,25 +136,8 @@ const Section = styled.section`
   
 @media screen and (max-width: 600px) {
  .info {
-  position: relative;
-  bottom: -5rem;
+  bottom: -10rem;
  }
- .content {
-  width: 100%;
-  margin-left: -139px;
-  padding-left: 1rem;
- }
- .grid {
-  margin-left: -30px;
-  grid-template-columns: 1fr;
-  width: calc(100% + 60px);
- }
- .col {
-  margin-right: 1.2rem;
-}
-.col p {
-  word-break: break-all;
-}
 }
 
 `;
