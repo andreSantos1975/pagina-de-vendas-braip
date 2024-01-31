@@ -57,21 +57,25 @@ const Section = styled.section`
   background-color: var(--secundary-color);
 
   .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "one two two two"
+      "one three four four"
+      "five six seven seven"
+      "eight six seven seven";
   }
 
   .grid-box {
+    min-height: 15rem; // Alterado para min-height
     width: 100%;
-    height: 15rem;
     cursor: pointer;
     box-sizing: border-box;
-    margin-bottom: 2rem; /* Espaçamento entre as imagens */
+    background: center / cover no-repeat; // Adicionado para prevenir conteúdo invisível
   }
 
   .double {
-    width: calc(50% - 1rem); /* 50% com um pequeno espaçamento para evitar problemas de layout */
+    grid-column: span 2;
   }
 
   .portfolio {
@@ -97,6 +101,7 @@ const Section = styled.section`
     align-items: center;
     gap: 1rem;
     margin: 4rem 0;
+
     span {
       color: #40E0D0;
       letter-spacing: 0.1rem;
@@ -105,8 +110,19 @@ const Section = styled.section`
   }
 
   @media screen and (max-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six";
+    }
+
     .grid-box {
-      width: 100% !important; 
+      height: auto; // Revertido para height:auto
     }
   }
 `;
