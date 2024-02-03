@@ -6,7 +6,7 @@ import Title from './Title';
 import play from '../asserts/play.ico';
 import { useScroll } from 'components/UseScroll';
 import { motion } from 'framer-motion';
-import {princingAnimation} from 'animation';
+import { princingAnimation } from 'animation';
 
 export default function Princing() {
   const [element, controls] = useScroll();
@@ -79,13 +79,13 @@ export default function Princing() {
         {plans.map(({ name, price }, index) => {
           return (
             <motion.div className="princing__plan" key={index}
-             variants={princingAnimation}
-             animate={controls}
-             transition={{
-              delay: 0.03,
-              type: 'tween',
-              duration: 0.8,
-            }}
+              variants={princingAnimation}
+              animate={controls}
+              transition={{
+                delay: 0.03,
+                type: 'tween',
+                duration: 0.8,
+              }}
             >
               <div className="princing__plan__name">
                 <h2>{name}</h2>
@@ -259,5 +259,40 @@ const Section = styled.section`
     }
   }
  }
+
+ @media screen and (max-width: 600px) {
+   padding: 1rem;
+   background-color: var(secondary-color);
+     princing__title {
+    margin: 0;
+    padding: 0 2rem;
+    text-align: center;
+      h2 {
+        font-size: 1.3rem;
+      }
+   }
+    .princing {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+      gap: 4rem;
+      &__plan {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+         &__name {
+          height: 10rem;
+          widht: 10rem;
+          h2 {
+            font-size: 1.5rem;
+          }
+         }
+         &__price {
+          
+         }
+      }
+    }
+ }
+
 `;
 
