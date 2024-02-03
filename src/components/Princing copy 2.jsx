@@ -261,7 +261,6 @@ const Section = styled.section`
  }
 
  @media screen and (max-width: 600px) {
-
   .princing__title p {
     margin-left: -130px !important; 
     margin-top: -34px !important;
@@ -272,61 +271,6 @@ const Section = styled.section`
   }
 }
 
- .princing {
-    flex-direction: column;
-    margin-top: 40px; 
-    padding: 0 1rem; 
-
-    .princing__plan {
-      margin-bottom: 20px; 
-      margin-left: -100px;
-
-      &:nth-child(2) {
-        .princing__plan__content {
-          padding: 0 1rem; 
-          border: none;
-        }
-      }
-    }
-  }
-
-  .princing__title {
-    margin: 2rem 1rem; 
-    margin-left: 0;
-
-    p {
-      margin-left: 0;
-    }
-
-    h1 {
-      margin-top: 10px; 
-      margin-left: 0;
-    }
-  }
-
-  .princing__plan_name__price {
-    margin-top: 5px; 
-
-    span {
-      font-size: 1rem; 
-    }
-
-    p {
-      font-size: 2rem; 
-    }
-  }
-
-  .princing__plan__content_actions {
-    .order-now {
-      font-size: 14px; 
-    }
-
-    .order-now-icon {
-      width: 30px; 
-      height: 30px; 
-      margin-top: 8px; 
-    }
-  }
 
 
 
