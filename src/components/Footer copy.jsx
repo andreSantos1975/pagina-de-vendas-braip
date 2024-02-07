@@ -66,24 +66,16 @@ const Foot = styled(motion.footer)`
 
   @media screen and (max-width: 600px) {
     .footer__social__icons {
-      margin-left: 100px;
-      justify-content: center; // Centraliza os ícones horizontalmente
+      margin-left: 35px;
+    
     }
   
     span {
-      margin-left: -100px; // Remove a margem à esquerda do texto
-      text-align: center; // Centraliza o texto horizontalmente
-      margin-bottom: 1rem; // Adiciona margem inferior para separar o texto dos ícones
-    }
-  
-    .footer__social__icons svg {
-      font-size: 1.2rem; // Reduza o tamanho dos ícones para caber dentro do contêiner
+    
+    
+    
     }
   }
-  
-  
-  
-  
   
 `;
 

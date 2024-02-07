@@ -154,8 +154,8 @@ const Section = styled.section`
       gap: 1rem;
 
       button {
-        width: 20px; 
-        height: 20px; 
+        width: 20px; /* Ajuste o tamanho desejado */
+        height: 20px; /* Ajuste o tamanho desejado */
         border-radius: 50%;
         background-color: #fff; /* Cor de fundo */
         border: 1px solid #fff; /* Borda */
@@ -173,46 +173,5 @@ const Section = styled.section`
       }
     }
   }
-
-  @media screen and (max-width: 600px) {
-    .container {
-      .testimonials {
-        width: 100%;
-        flex-direction: column;
-        text-align: left;
-  
-        .testimonials {
-          width: 100%;
-  
-          .image {
-            .cicle2 {
-              height: 7rem;
-              width: 7rem;
-            }
-          }
-        }
-  
-        .descripion {
-          height: auto;
-          word-wrap: break-word;
-          text-align: justify;
-          padding: 0 1rem;
-        }
-      }
-  
-      .controls {
-        flex-direction: row;
-        justify-content: center;
-      }
-    }
-  
-    .img__icon2 {
-      height: 345px;
-      width: 345px;
-      border-radius: 50%;
-    }
-  }
-  
-  
 `;
 

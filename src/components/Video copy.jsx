@@ -91,12 +91,6 @@ p {
   @media screen and (max-width: 600px) {
     margin-top: 2rem;
     margin-left: -25px;
-    p {
-      height: auto; /* Permita que a altura do texto se ajuste automaticamente */
-      word-wrap: break-word; /* Quebra de palavras para evitar vazamentos */
-      text-align: justify; /* Justificar o texto para um melhor alinhamento */
-      padding: 0 1rem; /* Adicione um espaçamento lateral conforme necessário */
-    }
   }
 `;
 
@@ -117,7 +111,5 @@ const MobileTitle = styled.div`
     }
   }
 `;
-
-
 
 

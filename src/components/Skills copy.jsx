@@ -184,32 +184,32 @@ const Section = styled.section`
 @media screen and (max-width: 600px) {
   .skills__title {
     p {
-      margin-left: -30px;
+      margin-left: -10px;
     }
     h2 {
-      margin-left: -30px;
-      margin-top: 22px;
+      margin-left: -10px;
     }
   }
 
   .skills__bars {
-    padding: 0.5rem;
+    padding: 2rem;
 
     .skills__bar__bar {
-      width: 134px;
-      height: 190px;
-      margin-left: -94px;
+      width: 145px;
+      height: 300px;
+      margin-left: -112px;
      
       .label-container {
         
-        margin-top: 53px;
+        margin-top: 23px;
+      
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-
-      span {
+      
+        span {
          height: 12px;
-         width: 166px;
+         width: 106px;
          margin-top: 10px;
         }
      }
@@ -217,14 +217,19 @@ const Section = styled.section`
   }
 
   .skills__content {
-    height: 380px;
-  .title {
+   
+  
+    .title {
       margin-left: 59px;
     }
   
     .descriptions {
       margin-left: 59px;
     }
+    &__content {
+   
+    }
   }
 }
+
 `;

@@ -99,6 +99,20 @@ const Section = styled.section`
     }
     
   }
+
+  @media screen and (max-width: 600px) {
+    .contact {
+      margin: 0 2rem; // Define a margem para 2rem em vez de 18rem
+      .contact__data {
+        grid-template-columns: 1fr; // Define a grade para uma coluna em telas menores
+        &__description {
+          margin-top: 0; // Remove a margem superior
+        }
+      }
+    }
+  }
+  
+
 `;
 const FormContainer = styled.div`
   display: flex;
@@ -149,6 +163,6 @@ const SubmitButton = styled.button`
   font-size: 16px;
 
   &:hover {
-    background-color: #40E0D0; // Altere para a cor desejada
+    background-color: #40E0D0; 
   }
 `;

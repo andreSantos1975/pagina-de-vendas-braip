@@ -261,51 +261,7 @@ const Section = styled.section`
  }
 
  @media screen and (max-width: 600px) {
-  padding: 1rem;
-  background-color: var(--secondary-color);
-  .princing__title {
-    margin: 0;
-    padding: 0 2rem;
-    text-align: center;
-    h1 {
-      font-size: 1.3rem; 
-    }
-  }
-  .background {
-    display: none;
-  }
-  .princing {
-    /* Remova a propriedade grid-template-columns: 1fr; */
-    padding: 1rem;
-    gap: 4rem;
-    &__plan {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      &__name {
-        height: 10rem;
-        width: 10rem; 
-        h2 {
-          font-size: 1.5rem;
-        }
-      }
-      &__price {
-        p {
-          font-size: 3rem;
-        }
-      }
-    }
-    &:nth-child(2) {
-      .princing__plan__content {
-        padding: 0rem;
-        border: none;
-      }
-    }
-  }
-}
 
-@media screen and (max-width: 600px) {
   .princing__title p {
     margin-left: -130px !important; 
     margin-top: -34px !important;
@@ -314,18 +270,9 @@ const Section = styled.section`
     margin-top: 43px;
     margin-left: -150px !important;
   }
-.princing__plan_name__price {
-    margin-top: 5px; 
+}
 
-    span {
-      font-size: 1rem; 
-    }
-
-    p {
-      font-size: 2rem; 
-    }
-  }
-.princing {
+ .princing {
     flex-direction: column;
     margin-top: 40px; 
     padding: 0 1rem; 
@@ -342,15 +289,47 @@ const Section = styled.section`
       }
     }
   }
-.princing__plan__content_actions {
+
+  .princing__title {
+    margin: 2rem 1rem; 
+    margin-left: 0;
+
+    p {
+      margin-left: 0;
+    }
+
+    h1 {
+      margin-top: 10px; 
+      margin-left: 0;
+    }
+  }
+
+  .princing__plan_name__price {
+    margin-top: 5px; 
+
+    span {
+      font-size: 1rem; 
+    }
+
+    p {
+      font-size: 2rem; 
+    }
+  }
+
+  .princing__plan__content_actions {
     .order-now {
       font-size: 14px; 
     }
-.order-now-icon {
+
+    .order-now-icon {
       width: 30px; 
       height: 30px; 
       margin-top: 8px; 
     }
   }
+
+
+
+
 `;
 
