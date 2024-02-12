@@ -198,7 +198,7 @@ const Section = styled.section`
     .skills__bar__bar {
       width: 134px;
       height: 190px;
-      margin-left: -94px;
+      margin-left: -90px;
      
       .label-container {
         

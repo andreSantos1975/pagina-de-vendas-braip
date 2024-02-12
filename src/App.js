@@ -1,5 +1,5 @@
 import React from 'react';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopWhatsApp from './components/ScrollToTopWhatsApp';
 import Home from './components/Home';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
@@ -12,12 +12,11 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { motion } from 'framer-motion';
-import ScrollToTopWhatsApp from './components/ScrollToTopWhatsApp';
+import ScrollToTop from './components/ScrollToTop';
 
 export const App = () => {
   return (
     <motion.div initial="hidden" animate="show">
-      <ScrollToTopWhatsApp />
       <Home />
       <Services />
       <Portfolio />
@@ -30,6 +29,7 @@ export const App = () => {
       <Contact />
       <Footer />
       <ScrollToTop />
+      <ScrollToTopWhatsApp /> 
     </motion.div>
-  )
-}
+  );
+};

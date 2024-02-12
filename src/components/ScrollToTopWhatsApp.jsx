@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { FaChevronUp, FaWhatsapp } from 'react-icons/fa';
 
 export default function ScrollToTopWhatsApp() {
-  const [visible, setVisible] = React.useState(false);
+  const [visible, setVisible] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       window.pageYOffset > 100 ? setVisible(true) : setVisible(false);
     };
@@ -54,5 +54,10 @@ const WhatsAppButton = styled.a`
   svg {
     color: #fff;
     font-size: 1.4rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    top: calc(100vh - 160px); // Ajusta a posição vertical do botão do WhatsApp
+    right: 40px; // Mantém a posição horizontal do botão.
   }
 `;

@@ -63,7 +63,7 @@ const Section = styled.section`
   @media screen and (max-width: 600px) {
     .video {
       z-index: 10;
-      margin-left: 55px;
+      margin-left: 70px;
   
       iframe {
         width: 250px;

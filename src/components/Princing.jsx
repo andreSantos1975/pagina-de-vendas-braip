@@ -307,12 +307,12 @@ const Section = styled.section`
 
 @media screen and (max-width: 600px) {
   .princing__title p {
-    margin-left: -130px !important; 
+    margin-left: -115px !important; 
     margin-top: -34px !important;
   }
   .princing__title h1 {
     margin-top: 43px;
-    margin-left: -150px !important;
+    margin-left: -115px !important;
   }
 .princing__plan_name__price {
     margin-top: 5px; 
@@ -332,7 +332,7 @@ const Section = styled.section`
 
     .princing__plan {
       margin-bottom: 20px; 
-      margin-left: -100px;
+      margin-left: -80px;
 
       &:nth-child(2) {
         .princing__plan__content {
