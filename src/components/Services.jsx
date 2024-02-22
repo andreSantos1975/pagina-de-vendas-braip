@@ -1,10 +1,10 @@
 import React from 'react';
 import Title from '../components/Title';
 import styled from 'styled-components';
-import play from '../asserts/play.ico';
-import services from '../asserts/folha1.png';
-import services2 from '../asserts/folha2.png';
-import services3 from '../asserts/folha3.png';
+import play from '../assets/play.ico';
+import services from '../assets/serum2.jpg';
+import services2 from '../assets/serum.png';
+import services3 from '../assets/milestone.png';
 import { useScroll } from 'components/UseScroll';
 import { motion } from 'framer-motion';
 import { servicesAnimations } from 'animation';
@@ -13,25 +13,25 @@ export default function Services() {
   const [element, controls] = useScroll();
   const data = [
     {
-      type: "Blowout",
-      text: "Chelow Cannabis was developed with the best first-world technology so you can experience significant results",
+      type: "Rosa Amazônica",
+      text: "Reduz a aparência das rugas instantaneamente, Hidratação 24 horas, Clareia e Uniformiza a Pele, Clareador de Manchas, Elimina o “Pé de Galinha” e “Bigode Chinês, Devolve a Firmeza e Elasticidade a sua Pele, Combate Estrias e Foliculite, Alívio das irritações, 11 efeitos em 1 sérum, Rosa Mosqueta + Ácido Hialurônico + Verisol.",
       image: services
     },
     {
-      type: "Blowout",
-      text: "Chelow Cannabis Pro has nanoparticle materials so that its active ingredient is absorbed easily.",
+      type: "Velvet Lab",
+      text: "Reduz a aparência das rugas instantaneamente, Hidratação 24 horas, Clareia e Uniformiza a Pele, Clareador de Manchas, Elimina o “Pé de Galinha” e Bigode Chinês, Devolve a Firmeza e Elasticidade a sua Pele, Combate Estrias e Foliculite, Alívio das irritações, Vitaminas A, E, B3 e B5, Velvet Lab com 9 efeitos em 1 sérum.",
       image: services2
     },
     {
-      type: "Blowout",
-      text: "Chelow Cannabis Ultra Blue is concentrated in the Delta 90 formula with 10% CBD",
+      type: "New Detox",
+      text: "New Detox é um poderoso suplemento que acelera o seu metabolismo, diminui o inchaço e a retenção, elimina as substâncias inflamatórias e te faz emagrecer de forma rápida, saudável e definitiva.",
       image: services3
     },
   ];
 
   return (
     <Section id='services' ref={element}>
-      <Title value="produtos" fontSize="1rem" />
+      {/*<Title value="produtos" fontSize="1rem" />*/}
       <div className="services">
         {data.map(({ type, text, image }, index) => {
          
@@ -46,7 +46,7 @@ export default function Services() {
               }}
             >
               <div className="services__service__image">
-                <img src={image} alt='Services' />
+                <img src={image} alt='Services' style={{ maxWidth: '100%', height: 'auto' }} />
                 <img src={play} alt='Readmore' className="play-icon" />
               </div>
               <div className="services__service__title">
@@ -74,7 +74,8 @@ const Section = styled.section`
     gap: 5rem;
     
     &__service {
-      padding: 2rem;
+      padding: 1rem;
+      margin-left: -30px;
       
       &:nth-of-type(2) {
         background-color: var(--primary-color);
@@ -134,10 +135,8 @@ const Section = styled.section`
       padding: 2rem; /* Ajusta o padding para tornar a .services__service mais larga */
     }
   
-    /* Utiliza um seletor direto para o componente Title */
-    /* Certifique-se de ajustar o valor da margem conforme necessário */
     h1 {
-      margin-left: -40px; /* Ajusta a margem para o título "produtos" */
+      margin-left: -40px; 
     }
   }
 `;

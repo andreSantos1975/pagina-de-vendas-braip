@@ -1,31 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import home from '../asserts/home.png';
-import play from '../asserts/play.ico';
+import home from '../assets/home.jpeg';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
-import { homeAnimation, homeInfoAnimation  } from 'animation';
- 
+import { homeAnimation, homeInfoAnimation } from 'animation';
+
 export default function Home() {
   return (
     <Section id='home'>
       <Navbar />
       <motion.div className="home"
-      variants={homeAnimation}
-      transition={{ delay: 0.3, duration: 0.6, type: "tween" }}
+        variants={homeAnimation}
+        transition={{ delay: 0.3, duration: 0.6, type: "tween" }}
       >
         <div className="content">
-          <div className="title">
-            <h1>Cannabis Gelow</h1>
-          </div>
           <div className="subTitle">
-            <div className="icon">
-              <img src={play} alt='Play-Botton' />
-            </div>
-            <p>
-              O gelow cannabis é feito com as melhores matérias primas do mercado. GelowCannabis importa diretamente da Marijane
-              industria SA
-            </p>
           </div>
         </div>
       </motion.div>
@@ -33,36 +22,6 @@ export default function Home() {
         variants={homeInfoAnimation}
         transition={{ delay: 0.3, duration: 0.6, type: "tween" }}
       >
-        <div className="grid">
-          <div className="col">
-            <strong>Academy</strong>
-            <p>travel in flowers</p>
-          </div>
-          <div className="col">
-            <strong>Email</strong>
-            <p>travelinflowers@gmail.com</p>
-          </div>
-          <div className="col">
-            <strong>Mobile</strong>
-            <p>+5561991637838</p>
-          </div>
-          <div className="col">
-            <strong>Address</strong>
-            <p>322 Long Fly</p>
-            <p>997773 India</p>
-          </div>
-          <div className="col">
-            <strong>Services</strong>
-            <p>sparking</p>
-            <p>spa cream</p>
-          </div>
-          <div className="col">
-            <strong>Working Hours</strong>
-            <p>Working</p>
-            <p>monday to friday</p>
-            <p>08:00 as 17:00</p>
-          </div>
-        </div>
       </motion.div>
     </Section>
   );
@@ -70,7 +29,7 @@ export default function Home() {
 
 const Section = styled.section`
   background: url(${home}) no-repeat center;
-  min-height: 100vh;
+  min-height: 215vh;
   background-size: cover;
   position: relative;
 

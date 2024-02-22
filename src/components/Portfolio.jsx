@@ -1,17 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import icon2 from '../asserts/icon2.ico';
+import icon2 from '../assets/icon2.ico';
 
 import { motion } from 'framer-motion';
 import { useScroll } from './UseScroll';
 import { portfolioAnimations } from 'animation';
 
-import portfolio from '../asserts/portfolio.png';
-import portfolio2 from '../asserts/portfolio2.png';
-import portfolio3 from '../asserts/portfolio3.png';
-import portfolio4 from '../asserts/portfolio4.png';
-import portfolio5 from '../asserts/portfolio5.png';
-import portfolio6 from '../asserts/portfolio6.png';
+import portfolio from '../assets/portfolio.jpeg';
+import portfolio4 from '../assets/portfolio8.jpeg';
+import portfolio3 from '../assets/milestone.png';
+import portfolio2 from '../assets/serum.png';
+import portfolio5 from '../assets/portfolio5.webp';
+import portfolio6 from '../assets/portfolio6.jpeg'; 
+
+
 
 const portfolioData = [
   { image: portfolio, double: false },
@@ -27,6 +29,7 @@ export default function Portfolio() {
 
   return (
     <Section id='portfolio' ref={element}>
+    
       <div className="grid">
         {portfolioData.map((item, index) => (
           <motion.div
@@ -44,8 +47,8 @@ export default function Portfolio() {
         ))}
       </div>
       <div className="portfolio more">
-        <span>Load More</span>
-        <img src={icon2} alt="Load More" style={{ width: '50px', height: 'auto' }} />
+        <span>New Detox certificado pela Anvisa</span>
+        <img src={icon2} alt="Load More" style={{ width: '20px', height: 'auto' }} />
       </div>
     </Section>
   );
@@ -106,6 +109,10 @@ const Section = styled.section`
       color: #40E0D0;
       letter-spacing: 0.1rem;
       text-transform: uppercase;
+    }
+
+    img {
+      margin-left: -22px;
     }
   }
 

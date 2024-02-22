@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import loadmore from '../asserts/icon2.ico';
-//import loadmoreImage from '../asserts/loadmore.jpg'; // Substitua o caminho pela sua imagem
-import image1 from '../asserts/image1.jpg';
-import image2 from '../asserts/image2.jpg';
-import image3 from '../asserts/image3.jpg';
+import image1 from '../assets/image1.png';
+import image2 from '../assets/image2.png';
+import image3 from '../assets/image3.png';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useScroll } from './UseScroll';
@@ -15,21 +13,21 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      designation: 'SPA',
+      designation: 'MA',
       name: 'Julia Beatriz',
-      review: 'After I started using gerard cannabis I no longer feel back pain. Im going to buy five so I dont run out of them in my stock.',
+      review: 'Recomendo o rosa amazônica para todas mulheres do Brasil.',
       image: image1,
     },
     {
-      designation: 'FULL',
-      name: 'Flavio Antônio',
-      review: 'Feel back pain. Im going to by ffive so I dont run out of then in my stock.',
+      designation: 'CE',
+      name: 'Flavia Antônia',
+      review: 'Notei que minha pele ficou mais macia e mais firme, também desapareceu algumas machas que eu tinha.',
       image: image2,
     },
     {
-      designation: 'SAIN',
-      name: 'Lotus Marquense',
-      review: 'Cannabis I no longer feel back pain. Im going to buy five so I dont run out of them in my stock.  them in my stock.',
+      designation: 'MG',
+      name: 'Lídia Maria',
+      review: 'Depois que começei a usar rosa amazônica fiquei dez anos mais nova.',
       image: image3,
     },
   ];

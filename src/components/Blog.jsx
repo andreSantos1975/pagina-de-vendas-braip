@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import play from '../asserts/play.ico';
-import home from '../asserts/home.png';
-import Title from './Title';
+import play from '../assets/play.ico';
+import home1 from '../assets/home.jpeg';
+import home2 from '../assets/serum.png';
+import home3 from '../assets/milestone.png'; 
+//import Title from './Title';
 import { useScroll } from 'components/UseScroll';
 import { motion } from 'framer-motion';
 import { blogsAnimation } from 'animation';
@@ -12,27 +14,30 @@ export default function Blog() {
 
   const blogData = [
     {
-      title: "MARIJANE CANNABIS",
-      type: "THC",
-      description: "Os produtos MARIJANE CANNABIS têm o delta 90 janne"
+      title: "Rosa Amazônica",
+      type: "Sérium Farcial",
+      description: "Único Sérim 11 em  1 do Brasil usado por influêncies renomadas do Brasil. Aproveite 90 dias de garantia.",
+      image: home1 
     },
     {
-      title: "COLHEITA DAS FLORES",
-      type: "THC",
-      description: "As flores possuem um alto grau de THC"
+      title: "Velvet Lab",
+      type: "Sérium Farcial",
+      description: "9 efeitos em 1 Sérum. Reduz a aparência das rugas instantaneamente, A tecnologia americana que devolve a beleza da sua pele! Aproveite o frete grátis e garantia de 30 dias",
+      image: home2 
     },
     {
-      title: "CDB NATURAL",
-      type: "CDB",
-      description: "As flores de CDB possuem o necessário para acabar"
+      title: "New Detox",
+      type: "cápsulas!",
+      description: "Seu corpo livre de inchaços! Você mais magra já nas primeiras semanas. PRODUTO COM ANVISA APROVADO! Fabricado pela Capsul Brasil. Aproveite 30 dias de garantia, Ebook e aplicativo",
+      image: home3 
     },
   ];
 
   return (
     <Section id='blog' ref={element}>
-      <Title value='Blog' />
+     
       <div className="blogs">
-        {blogData.map(({ title, type, description }) => (
+        {blogData.map(({ title, type, description, image }) => (
           <motion.div
             className="blog"
             key={title}
@@ -44,7 +49,7 @@ export default function Blog() {
               duration: 0.8
             }}
           >
-            <div className="image" style={{ backgroundImage: `url(${home})` }} />
+            <div className="image" style={{ backgroundImage: `url(${image})` }} /> {/* Use a imagem correspondente */}
             <div className="content">
               <h1>{title}</h1>
               <span className="type">{type}</span>
@@ -53,7 +58,7 @@ export default function Blog() {
               </div>
               <div className="more">
                 <img src={play} alt='Play' />
-                <span>Read More</span>
+                <span>Saiba mais</span>
               </div>
             </div>
           </motion.div>
@@ -71,11 +76,12 @@ const Section = styled.section`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
-    margin: 10rem 5rem;
+    margin: 10rem 1rem;
 
     .blog {
       .image {
-        height: 30rem; /* Ajuste a altura conforme necessário */
+        height: 20rem; 
+        width: 20rem;
         background-size: cover;
         display: flex;
         align-items: center;
