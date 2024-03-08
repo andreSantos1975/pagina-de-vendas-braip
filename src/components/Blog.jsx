@@ -17,27 +17,29 @@ export default function Blog() {
       title: "Rosa Amazônica",
       type: "Sérium Farcial",
       description: "Único Sérim 11 em  1 do Brasil usado por influêncies renomadas do Brasil. Aproveite 90 dias de garantia.",
-      image: home1 
+      image: home1,
+      affiliateLink: "https://ev.braip.com/ref?pv=proeo8oe&af=afi5dg9l5g"
     },
     {
       title: "Velvet Lab",
       type: "Sérium Farcial",
       description: "9 efeitos em 1 Sérum. Reduz a aparência das rugas instantaneamente, A tecnologia americana que devolve a beleza da sua pele! Aproveite o frete grátis e garantia de 30 dias",
-      image: home2 
+      image: home2,
+      affiliateLink: "https://app.monetizze.com.br/r/ATR23928555"
     },
     {
       title: "New Detox",
       type: "cápsulas!",
       description: "Seu corpo livre de inchaços! Você mais magra já nas primeiras semanas. PRODUTO COM ANVISA APROVADO! Fabricado pela Capsul Brasil. Aproveite 30 dias de garantia, Ebook e aplicativo",
-      image: home3 
+      image: home3,
+      affiliateLink: "https://ev.braip.com/ref?pv=pro6e1zm&af=afi07d09g2"
     },
   ];
 
   return (
     <Section id='blog' ref={element}>
-     
       <div className="blogs">
-        {blogData.map(({ title, type, description, image }) => (
+        {blogData.map(({ title, type, description, image, affiliateLink }) => (
           <motion.div
             className="blog"
             key={title}
@@ -49,7 +51,9 @@ export default function Blog() {
               duration: 0.8
             }}
           >
-            <div className="image" style={{ backgroundImage: `url(${image})` }} /> {/* Use a imagem correspondente */}
+            <a href={affiliateLink} target="_blank" rel="noopener noreferrer">
+              <div className="image" style={{ backgroundImage: `url(${image})` }} />
+            </a>
             <div className="content">
               <h1>{title}</h1>
               <span className="type">{type}</span>
@@ -57,7 +61,9 @@ export default function Blog() {
                 <p>{description}</p>
               </div>
               <div className="more">
-                <img src={play} alt='Play' />
+                <a href={affiliateLink} target="_blank" rel="noopener noreferrer">
+                  <img src={play} alt='Play' />
+                </a>
                 <span>Saiba mais</span>
               </div>
             </div>

@@ -5,6 +5,7 @@ import { MdClose } from 'react-icons/md';
 import { useScroll } from 'components/UseScroll';
 import { motion } from 'framer-motion';
 import { navAnimation } from 'animation';
+import logo from '../assets/beleza.png';
 
 export default function Navbar() {
 
@@ -19,7 +20,7 @@ export default function Navbar() {
       state={isNavOpen ? 1 : 0}
     >
       <div className="brand__container">
-       
+         <img src={logo} alt="Logo" className="brand" /> 
         <div className="toggle">
           {isNavOpen ? (
             <MdClose onClick={ () => setIsNavOpen(false)} />
@@ -39,19 +40,19 @@ export default function Navbar() {
             <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a href="#services">Produtos</a>
           </li>
           <li>
             <a href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#blog">Blog</a>
+            <a href="#blog">Garantia</a>
           </li>
           <li>
             <a href="#skills">Skills</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact">Contato</a>
           </li>
         </ul>
       </div>
@@ -70,9 +71,10 @@ const Nav = styled(motion.nav)`
     .toggle {
       display: none;
     }
-    .brand img {
-      width: 40px; /* Para diminuir o tamanho da logo */
+    .brand {
+      width: 80px; /* Para diminuir o tamanho da logo */
       height: auto; /* Mantém a proporção da imagem */
+      margin-top:-30px;
     }
   }
   .links {
@@ -85,7 +87,7 @@ const Nav = styled(motion.nav)`
       }
       li {
         a {
-          color: #ffff;
+          color: #808080;
           text-decoration: none;
           font-weight: 400; 
           font-size: 0.9rem;

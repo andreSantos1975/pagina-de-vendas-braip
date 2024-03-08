@@ -6,6 +6,8 @@ import { useScroll } from './UseScroll';
 import { footerTextAnimation } from 'animation';
 
 export default function Footer() {
+  const currentDate = new Date().getFullYear(); // Obtenha o ano atual
+
   const [element, controls] = useScroll();
   return (
     <Foot ref={element}>
@@ -18,7 +20,7 @@ export default function Footer() {
              duration: 0.8
            }}
       >
-        &copy: React Web Site Transition animation
+        &copy; {currentDate} Direitos reservados A7 Web Designer
       </motion.span>
       <motion.div className="footer__social__icons"
         variants={footerTextAnimation}
@@ -38,7 +40,7 @@ export default function Footer() {
 }
 
 const Foot = styled(motion.footer)`
-  background-color: var(--primary-color);
+  background-color: var(--tertiary-color);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -80,10 +82,6 @@ const Foot = styled(motion.footer)`
       font-size: 1.2rem; // Reduza o tamanho dos ícones para caber dentro do contêiner
     }
   }
-  
-  
-  
-  
   
 `;
 

@@ -13,29 +13,29 @@ export default function Skills() {
       amount: 75
     },
     {
-      name: "Skin",
+      name: "Corpo",
       amount: 34
     },
     {
-      name: "Cosmetic",
-      amount: 50
+      name: "Cabelos",
+      amount: 19
     },
     {
-      name: "SPA",
+      name: "Mãos",
       amount: 68
     },
     {
-      name: "Medical",
-      amount: 57
+      name: "Medicinal",
+      amount: 22
     },
   ];
 
   return (
     <Section id="skills" ref={element}>
-      <Title value='skills' />
+      <Title value='skill' />
       <div className="skills__title">
-        <p>Our Skills</p>
-        <h2>Checker Our Supper Skills</h2>
+        <p>Indicações</p>
+        <h2>Habilidades geral dos produtos no site </h2>
       </div>
       <div className="skills">
         <div className="skills__bars">
@@ -63,10 +63,10 @@ export default function Skills() {
         </div>
         <div className="skills__content">
           <p className="title">
-            Beauty Servicess and Products
+               Ação dos produtos de beleza e produtos de saúde no site  
           </p>
           <p className="descriptions">
-            To be a successFull becauty you sochoud have witch range.
+             Para ter sucesso e onde você deve ter maior alcance.
           </p>
         </div>
       </div>
@@ -91,16 +91,16 @@ const Section = styled.section`
      p {
       text-transform: uppercase;
       letter-spacing: 0.2rem;
-      color: #40E0D0;
+      color: var(--tertiary-color);
      }
      h2 {
-      color: #40E0D0;
+      color: var(--tertiary-color);
       font-size: 2rem;
      }
 }
 .skills__bars {
   display: flex;
-  margin-left: 56px;
+  margin-left: 156px;
   gap: 2rem; /* Ajuste conforme necessário para o espaçamento entre as barras */
   align-items: center;
 

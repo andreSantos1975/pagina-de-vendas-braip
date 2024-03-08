@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import home from '../assets/home.jpeg';
+import home from '../assets/home5.png';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 import { homeAnimation, homeInfoAnimation } from 'animation';
@@ -14,8 +14,7 @@ export default function Home() {
         transition={{ delay: 0.3, duration: 0.6, type: "tween" }}
       >
         <div className="content">
-          <div className="subTitle">
-          </div>
+        
         </div>
       </motion.div>
       <motion.div className="info"
@@ -29,13 +28,15 @@ export default function Home() {
 
 const Section = styled.section`
   background: url(${home}) no-repeat center;
-  min-height: 215vh;
-  background-size: cover;
+  min-height: 155vh;
+  background-size: contain; /* Alterado para 'contain' */
+  background-position: center; /* Centraliza a imagem */
   position: relative;
+  overflow: hidden; /* Evita que a imagem vaze para fora do contêiner */
 
   .content img {
     width: 40px;
-    height: auto;
+    height: 100px;
   }
 
   .home {
@@ -57,6 +58,7 @@ const Section = styled.section`
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
+    margin-top: -29px;
   }
 
   .subTitle {

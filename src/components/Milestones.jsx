@@ -1,7 +1,7 @@
 import React from 'react';
-import milestones from '../assets/milestones.png';
-import milestones2 from '../assets/milestones4.png';
-import milestones3 from '../assets/milestones3.png';
+import milestones from '../assets/clientes.png';
+import milestones3 from '../assets/avaliacoes.png';
+import milestones2 from '../assets/acesso.png';
 import milestones_background from '../assets/milestone.png';
 import styled from 'styled-components';
 import { useScroll } from 'components/UseScroll';
@@ -18,14 +18,14 @@ export default function Milestones() {
       amount: "877",
     },
     {
-      image: milestones2,
-      data: "todos os acessos",
-      amount: "1.4M",
-    },
-    {
       image: milestones3,
       data: "Avaliações",
       amount: "323",
+    },
+    {
+      image: milestones2,
+      data: "todos os acessos",
+      amount: "1.4M",
     },
   ];
 

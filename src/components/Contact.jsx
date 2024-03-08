@@ -10,7 +10,7 @@ export default function Contact() {
 
   return (
     <Section id='contact' ref={element}>
-      <Title value='contact' />
+      <Title value='contato' />
       <motion.div className="contact" 
          variants={contactAnimation}
          animate={controls}
@@ -21,24 +21,18 @@ export default function Contact() {
          }}
       >
         <div className="contact__title">
-          <p>Stain in touch with me</p>
-          <h2>Quick Contact</h2>
+          <p>Gostamos de conversar com nossos clientes</p>
+          <h2>Mande uma mensagem para mim</h2>
         </div>
         <div className="contact__data">
           <div className="contact__data__description">
-            <h4>Just to say hi</h4>
-            <p>If you have any questions simply use the following details</p>
-            <p>Business out to theik thers presence to never level If you have any questions simply use the following details</p>
+            <h4>Você quer saber mais dicas?</h4>
+            <p>Deixe seu email para receber informações sobre beleza feminina e baixe agora um ebook ensinando noções básicas e a importância da água e da dieta no sucesso da sua beleza.</p>
+            <p>A beleza é algo que vai além dos cuidados da pele, ou organismo. Tem a ver também com seu sentimento devido as coisas que acontecem com a pessoa. Agreditamos que a maneira de pensar é uma das "chaves" para alcançar o sucesso, o conhecimento esta entre essas que pode transformar as coisas na sua vida.</p>
             <p>
-              <strong>Address:</strong> 33 Flyover Road
+              <strong>Email:</strong>codecoffeers@gmail.com
             </p>
-            <p>
-              <strong>Email:</strong> Cannabis@gmail.com
-            </p>
-            <p>
-              <strong>Website:</strong> www.website.com
-            </p>
-          </div>
+        </div>
           <FormContainer>
             <h4>Entrar em contato</h4>
             <Form>

@@ -7,11 +7,11 @@ import { useScroll } from './UseScroll';
 import { portfolioAnimations } from 'animation';
 
 import portfolio from '../assets/portfolio.jpeg';
-import portfolio4 from '../assets/portfolio8.jpeg';
+import portfolio4 from '../assets/Blue.jpeg';
 import portfolio3 from '../assets/milestone.png';
 import portfolio2 from '../assets/serum.png';
 import portfolio5 from '../assets/portfolio5.webp';
-import portfolio6 from '../assets/portfolio6.jpeg'; 
+import portfolio6 from '../assets/nature3.jpeg'; 
 
 
 
@@ -72,7 +72,7 @@ const Section = styled.section`
   .grid-box {
     min-height: 15rem; // Alterado para min-height
     width: 100%;
-    cursor: pointer;
+    cursor: default;
     box-sizing: border-box;
     background: center / cover no-repeat; // Adicionado para prevenir conteúdo invisível
   }
@@ -106,7 +106,7 @@ const Section = styled.section`
     margin: 4rem 0;
 
     span {
-      color: #40E0D0;
+      color: var(--tertiary-color);
       letter-spacing: 0.1rem;
       text-transform: uppercase;
     }

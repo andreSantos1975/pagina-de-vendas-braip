@@ -6,11 +6,12 @@ import { videoAnimations } from 'animation';
 
 import videoSrcLeft from '../assets/videos/video_right.mp4';
 import videoSrcRight from '../assets/videos/video_left.mp4';
+import videoSrcCenter from '../assets/videos/video_center.mp4';
 
 export default function Video() {
   const [element, controls] = useScroll();
 
-  const videoId = 'la9IonFnRzA'; // ID do vídeo do YouTube
+
 
   return (
     <Section id='section' ref={element}>
@@ -34,8 +35,8 @@ export default function Video() {
           </motion.div>
         </SideVideos>
         <CenterVideo>
-          <motion.div
-            className="center-video"
+        <motion.div
+            className="side-video"
             variants={videoAnimations}
             animate={controls}
             transition={{
@@ -44,14 +45,11 @@ export default function Video() {
               duration: 0.8,
             }}
           >
-            {/* Vídeo do YouTube no centro */}
-            <iframe
-              title="YouTube Video"
-              width="400"
-              height="300"
-              src={`https://www.youtube.com/embed/${videoId}`}
-              allowFullScreen
-            ></iframe>
+            {/* Vídeo do center */}
+            <video width="500" height="350" controls>
+              <source src={videoSrcCenter} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </motion.div>
         </CenterVideo>
         <SideVideosRight> {/* Aqui você precisa substituir SideVideosRight */}
@@ -81,7 +79,7 @@ export default function Video() {
 
           "Os produtos de beleza deste site tornaram minha rotina de cuidados com a pele mais simples e eficaz. Meu rosto nunca se sentiu tão suave e hidratado!" - Sofia R., São Paulo.
 
-         "Desde que comecei a usar os produtos deste site, tenho recebido elogios constantes sobre minha aparência. Nunca me senti tão confiante e bonita!" - Marta P., Mato Grosso.
+          "Desde que comecei a usar os produtos deste site, tenho recebido elogios constantes sobre minha aparência. Nunca me senti tão confiante e bonita!" - Marta P., Mato Grosso.
 
           Descubra por si mesmo por que tantas pessoas confiam em nossos produtos para realçar sua beleza natural. Faça seu pedido hoje e dê o primeiro passo para uma aparência deslumbrante e uma autoconfiança renovada!"
         </p>
